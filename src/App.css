@@ -1,0 +1,111 @@
+:root {
+  --main-bg-color: #215385;
+  --main-text-color: #F0F2EF;
+  --secondary-bg-color: #7E8287;
+  --alt-bg-color: #30a7bc;
+  --alt-text-color: #0d162eef;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--main-text-color);
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.header h1 {
+  padding: 0;
+  margin: 0;
+}
+
+
+.main {
+  text-align: center;
+  height: 100vh;
+
+}
+
+
+
+.configure-settings {
+  margin: 4rem auto;
+  display: flex;
+  background-color: var();
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  gap: .25rem
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+  /* Main App */
+  .main {
+    height: 100vh;
+  }
+
+
+
+
+  .title {
+    font-size: 26px;
+  }
+
+
+
+
+
+}

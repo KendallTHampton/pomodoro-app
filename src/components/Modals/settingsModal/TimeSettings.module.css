@@ -1,0 +1,60 @@
+.category {
+    margin-bottom: 2rem;
+}
+
+.categoryHeader {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #0fa7a28f;
+    margin-bottom: 1rem;
+}
+
+.timerInputs {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.timeSettingsInputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.timeSettingsInput {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.timeSettingsInput p {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    font-weight: 700;
+    color: #aeaeae;
+}
+
+.timeSettingsInput input {
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #a0a0a0;
+    padding: .5rem .65rem;
+    width: 100%;
+    outline: none;
+    background-color: #ececec;
+    font-size: 1.2rem;
+}
+
+.timeSettingsSelections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: #000000;
+}

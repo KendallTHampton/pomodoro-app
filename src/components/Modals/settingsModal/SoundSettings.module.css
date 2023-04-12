@@ -1,0 +1,50 @@
+.category {
+    margin-bottom: 2rem;
+}
+
+.categoryHeader {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #0fa7a28f;
+    margin-bottom: 2rem;
+}
+
+.soundSettingsInputs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.soundSettingsInput {
+    display: flex;
+    font-weight: 700;
+    justify-content: space-between;
+}
+
+
+.soundSettingsInput select {
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #a0a0a0;
+    padding: .5rem .65rem;
+    outline: none;
+    background-color: #ececec;
+    font-size: 1.2rem;
+    width: 150px;
+}
+
+.sounds {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.soundVolume {
+    display: flex;
+    gap: .25rem;
+
+}
