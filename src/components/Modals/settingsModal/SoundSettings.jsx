@@ -7,6 +7,9 @@ import Context from '../../../store/Context';
 const SoundSettings = () => {
     const {userSettings, updateSettings} = useContext(Context);
 
+    const currentMode = userSettings.currentMode
+    const color = userSettings.colors[currentMode]
+
     const {
         tickerSound: tickerSoundFromContext,
         tickerVolume: tickerVolumeFromContext,
@@ -34,10 +37,10 @@ const SoundSettings = () => {
             <div className={styles.categoryHeader}>
                 <VolumeUpIcon
                     sx={{
-                        color: "#0fa7a28f",
+                        color: color,
                     }}
                 />
-                <h4>Sound Settings</h4>
+                <h4 style={{color: `${ color }`}}>SOUNDS</h4>
             </div>
 
             <div className={styles.soundSettingsBody}>

@@ -8,16 +8,20 @@ import styles from './ColorsSettings.module.css'
 const ColorsSettings = () => {
     const {userSettings, updateSettings, dispatchWhichModal} = useContext(Context)
     const {colors} = userSettings
+    const currentMode = userSettings.currentMode
+    const color = userSettings.colors[currentMode]
 
     return (
         <div className={styles.category}>
             <div className={styles.categoryHeader}>
                 <ColorLensIcon
                     sx={{
-                        color: "#0fa7a28f",
+                        color: color,
                     }}
                 />
-                <h4>COLORS</h4>
+                <h4 style={{color: `${ color }`}}>
+                    COLORS
+                </h4>
             </div>
 
             <div className={styles.colorSettingsBody}>

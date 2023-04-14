@@ -23,10 +23,9 @@
     padding: 0.5rem;
     gap: 0.5rem;
     justify-content: space-between;
-    align-items: center;
 }
 
-.paletteWrapper {}
+
 
 .paletteColor {
     width: 60px;
@@ -48,8 +47,12 @@
 
 @media screen and (max-width: 480px) {
     .palette {
-        grid-template-columns: repeat(3, auto);
+        display: grid;
+        grid-template-columns: repeat(minmax(0, auto), 3);
+        height: 100px;
     }
+
+
 
     .paletteColor {
         width: 40px;

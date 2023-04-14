@@ -42,13 +42,13 @@ const Pomodoro = () => {
             interval = setInterval(() => setTimer((time) => time - 1), 1000);
         } else clearInterval(interval);
 
-        if (currentMode === "focus" && timer === 0) {
+        if (currentMode === "focus" && timer === 0 && !isPaused) {
             setCycleCount((prev) => prev + 1);
             setTimer(breakTime * 60);
             updateSettings({currentMode: "break"});
         }
 
-        if (currentMode === "break" && timer === 0) {
+        if (currentMode === "break" && timer === 0 && !isPaused) {
             if (cycleCount >= parseInt(userSettings.cycles, 10)) {
                 setCycleCount(0);
                 setTimer(longBreakTime * 60);
@@ -59,7 +59,7 @@ const Pomodoro = () => {
             }
         }
 
-        if (currentMode === "longBreak" && timer === 0) {
+        if (currentMode === "longBreak" && timer === 0 && !isPaused) {
             setCycleCount(0);
             setTimer(focusTime * 60);
             updateSettings({currentMode: "focus"});
@@ -154,7 +154,10 @@ const Pomodoro = () => {
                 <button className="settings-button stop-button" onClick={resetPomodoro}>Reset</button>
                 <button
                     className='settings-button'
-                    onClick={() => dispatchWhichModal({type: 'TOGGLE_SETTINGS_MODAL'})}
+                    onClick={() => {
+                        setIsPaused(true)
+                        dispatchWhichModal({type: 'TOGGLE_SETTINGS_MODAL'})
+                    }}
                 >
                     <SettingsOutlined
                         style={{

@@ -7,16 +7,18 @@ import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 
 const TimeSettings = () => {
     const {userSettings, updateSettings} = useContext(Context);
+    const currentMode = userSettings.currentMode
+    const color = userSettings.colors[currentMode]
 
     return (
         <div className={styles.category}>
             <div className={styles.categoryHeader}>
                 <AccessTimeRoundedIcon
                     sx={{
-                        color: "#0fa7a28f",
+                        color: color,
                     }}
                 />
-                <h4>TIMER</h4>
+                <h4 style={{color: `${ color }`}}>TIMER</h4>
             </div>
             <div className={styles.timeSettingsBody}>
                 <h4>Time (minutes)</h4>
@@ -33,6 +35,7 @@ const TimeSettings = () => {
                                     if (e.target.value > 60) {
                                         e.target.value = 60;
                                     }
+
                                     updateSettings({
                                         focusTime: e.target.value,
                                     });
@@ -50,9 +53,7 @@ const TimeSettings = () => {
                                     if (e.target.value > 60) {
                                         e.target.value = 60;
                                     }
-                                    if (e.target.value < 1) {
-                                        e.target.value = 1;
-                                    }
+
                                     updateSettings({
                                         breakTime: e.target.value,
                                     });
@@ -70,9 +71,7 @@ const TimeSettings = () => {
                                     if (e.target.value > 60) {
                                         e.target.value = 60;
                                     }
-                                    if (e.target.value < 1) {
-                                        e.target.value = 1;
-                                    }
+
                                     updateSettings({
                                         longBreakTime: e.target.value,
                                     });

@@ -24,13 +24,13 @@
     right: 0;
     filter: blur(10px);
     z-index: -1;
-
 }
 
 
 .modes {
+    text-align: center;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -154,7 +154,7 @@
 @media screen and (max-width: 480px) {
     .pomodoro-container {
         width: 90%;
-        height: 60%;
+        height: 50%;
     }
 
     .settings-button {
@@ -168,7 +168,7 @@
     }
 
     .time-display h1 {
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .time-display h2 {
